@@ -1,0 +1,16 @@
+def cetak_angka_jumlah_orang():
+
+    try:
+        jumlah_orang_str = input("Masukkan jumlah orang: ")
+        jumlah_orang = int(jumlah_orang_str)
+
+        if jumlah_orang <= 0:
+            raise ValueError("Jumlah orang tidak valid (harus > 0)")
+        else:
+            print("Mencetak angka dari 1 sampai", jumlah_orang)
+            for i in range(1, jumlah_orang + 1):
+                print(i)
+    except ValueError as e:
+        print(f"Error: {e}")
+    except Exception as e:
+        print(f"Terjadi kesalahan tak terduga: {e}")
