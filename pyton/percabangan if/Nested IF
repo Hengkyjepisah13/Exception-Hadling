@@ -1,0 +1,8 @@
+print ("menentukan kelulusan")
+nama = input ("hengky:")
+nilai_uts = int("75")
+nilai_uas = int("80")
+if nilai_uas >=70:
+    if nilai_uts >= 90:
+        print('selamat',hengky,"anda lulus")
+        else 

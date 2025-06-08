@@ -1,0 +1,12 @@
+ Biodata Pribadi
+
+nama = input("Hengky Jepisah Seda: ")
+umur = input("24: ")
+alamat = input("Sukabumi Kota: ")
+pekerjaan = input("Pegawai Toko: ")
+
+print("\n=== BIODATA PRIBADI ===")
+print(f"Nama      : {nama}")
+print(f"Umur      : {umur} tahun")
+print(f"Alamat    : {alamat}")
+print(f"Pekerjaan : {pekerjaan}")

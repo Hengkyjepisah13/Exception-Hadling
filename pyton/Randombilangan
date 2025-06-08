@@ -1,0 +1,8 @@
+from random import randint
+
+nilai1 = randint(0,100)
+nilai2 = randint(0,100)
+hasil = nilai1 * nilai2
+
+jawab = int(input("Berapa hasil perkalian dari {} dan {} ? = ".format(nilai1,nilai2)))
+print("Jawaban anda {}".format(jawab==hasil))

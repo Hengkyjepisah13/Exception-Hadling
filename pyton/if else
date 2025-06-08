@@ -1,0 +1,8 @@
+print ("=====Login=====")
+password = input ("masukan password")
+if password =="mine24":
+    print ("selamat datang di aplikasin saya")
+else :
+    print ("password salah,coba lagi ya")
+
+print ("terimaksih telah mempercayai aplikasi kami")

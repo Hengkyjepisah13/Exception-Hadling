@@ -1,0 +1,8 @@
+Nama: Muchtar Ali Setyo Yudono
+NIM: 0426019502
+Nomor Telepon: 089677568788
+
+Menampilkan informasi ke layar
+print("Muchtar Ali Setyo Yudono")
+print("0426019502")
+print("089677568788")

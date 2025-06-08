@@ -1,0 +1,19 @@
+menu():
+    print("menu":)
+    print("1. pilihan 1")
+    print("2. pilihan 2")
+    print("3. pilihan 3")
+    choice = input("masukkan pilihan anda: ")
+    return choice  
+
+while true:
+    choice = menu()
+    if choice == "1":
+        print("anda memilih pilihan 1")
+    if choice == "2":
+        print("anda memilih pilihan 2")
+    if choice == "3":
+        print("keluar dari program")
+        break
+    else
+        print("pilihan tidak valid") 

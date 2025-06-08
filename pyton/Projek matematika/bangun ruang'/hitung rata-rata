@@ -1,0 +1,68 @@
+def hitung_rata_rata(nilai_list):
+    """
+    Menghitung dan mengembalikan nilai rata-rata dari list angka.
+    Menangani Exception jika list kosong atau ada elemen yang bukan angka.
+
+    Args:
+        nilai_list (list): List angka.
+
+    Returns:
+        float: Nilai rata-rata.
+
+    Raises:
+        ZeroDivisionError: Jika list kosong.
+        TypeError: Jika salah satu elemen bukan angka.
+    """
+    try:
+        if not nilai_list:  # Memeriksa apakah list kosong
+            raise ZeroDivisionError("List kosong, tidak bisa menghitung rata-rata.")
+
+        total = 0
+        for nilai in nilai_list:
+            if not isinstance(nilai, (int, float)): # Memeriksa tipe data
+                raise TypeError(f"Elemen '{nilai}' bukan angka. Semua elemen harus angka.")
+            total += nilai
+        return total / len(nilai_list)
+    except ZeroDivisionError as e:
+        print(f"Error (ZeroDivisionError): {e}")
+        return None  # Atau bisa melempar kembali exception
+    except TypeError as e:
+        print(f"Error (TypeError): {e}")
+        return None  # Atau bisa melempar kembali exception
+    except Exception as e:
+        print(f"Terjadi kesalahan tak terduga: {e}")
+        return None
+
+# Contoh penggunaan fungsi hitung_rata_rata:
+
+print("\n--- Pengujian hitung_rata_rata ---")
+
+# Contoh 1: List valid
+list_angka_valid = [10, 20, 30, 40, 50]
+rata_rata_valid = hitung_rata_rata(list_angka_valid)
+if rata_rata_valid is not None:
+    print(f"Rata-rata dari {list_angka_valid} adalah: {rata_rata_valid}")
+
+# Contoh 2: List kosong (ZeroDivisionError)
+list_kosong = []
+rata_rata_kosong = hitung_rata_rata(list_kosong)
+if rata_rata_kosong is None:
+    print("Tidak bisa menghitung rata-rata untuk list kosong.")
+
+# Contoh 3: List dengan elemen non-angka (TypeError)
+list_campur = [1, 2, 'tiga', 4]
+rata_rata_campur = hitung_rata_rata(list_campur)
+if rata_rata_campur is None:
+    print("Tidak bisa menghitung rata-rata untuk list dengan elemen non-angka.")
+
+# Contoh 4: List dengan elemen non-angka (TypeError, contoh lain)
+list_salah_tipe = [10, 20, "abc", 40]
+rata_rata_salah_tipe = hitung_rata_rata(list_salah_tipe)
+if rata_rata_salah_tipe is None:
+    print("Tidak bisa menghitung rata-rata karena ada elemen yang bukan angka.")
+
+# Contoh 5: List dengan elemen angka float
+list_float = [1.5, 2.5, 3.0]
+rata_rata_float = hitung_rata_rata(list_float)
+if rata_rata_float is not None:
+    print(f"Rata-rata dari {list_float} adalah: {rata_rata_float}")
